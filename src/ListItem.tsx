@@ -19,13 +19,11 @@ export function ListItem(props: { name: string }) {
     };
 
     return isChanging ? (
-        <div>
-            <input
-                value={tmpText}
-                onChange={(e) => setTmpText(e.target.value)}
-                onKeyDown={onKeyDown}
-            />
-        </div>
+        <input
+            value={tmpText}
+            onChange={(e) => setTmpText(e.target.value)}
+            onKeyDown={onKeyDown}
+        />
     ) : (
         <div onClick={() => setIsChanging(true)}>{text}</div>
     );
